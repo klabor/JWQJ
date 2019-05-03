@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="石家庄金伟清洁服务有限公司" />
+    <meta name="Description" content="石家庄金伟清洁服务有限公司" />
+    <title>石家庄金伟清洁服务有限公司</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        /*main header css*/
+        #head1 {
+            width: 100%;
+            height: 345px;
+            background: url(images/custom/main_top.jpg) center center;
+            background-size: 100%;
+            position: relative;
+        }
+
+        #head1>img {
+            position: absolute;
+            left: 10px;
+        }
+
+        #head1>h1 {
+            position: absolute;
+            right: 65px;
+            writing-mode: vertical-lr;
+            color: #25262A;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+</head>
+
+<body>
+    <div id="head1">
+        <img src="images/custom/yz.png" />
+        <h1>【石家庄金伟清洁服务有限公司】</h1>
+    </div>
+    <!--menu start-->
+    <div style=" width:100%; height:54px; background:url(images/menu_bg.gif); position:relative; z-index:55000;">
+        <div class="wrap_all" style="height:54px; width:1200px; margin:0px auto;">
+            <div id="top">
+                <div class="navwrap">
+                    <ul id="nav">
+                        <li class="page_item"><a href="index.html">首页</a></li>
+                        <li class="page_item"><a href="video.html">关于我们</a></li>
+                        <li class="page_item"><a href="detail.html">案例展示</a></li>
+                        <li class="page_item"><a href="detail.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style=" clear:both"></div>
+    </div>
+    <!--menu end-->
+    <!--slider start-->
+    <div class="main_visual">
+        <div class="flicking_con">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+        <div class="main_image">
+            <ul>
+                <!-- <li>
+                    <a href="category.html" target="_blank">
+                        <img src="http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5075339.jpg" />
+                    </a>
+                </li> -->
+                <li>
+                    <span style="background:url(http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5075339.jpg) center top no-repeat;background-size:cover;">
+                        <a href="category.html" target="_blank"></a>
+                    </span>
+                </li>
+            </ul>
+            <a href="javascript:;" id="btn_prev"></a>
+            <a href="javascript:;" id="btn_next"></a>
+        </div>
+    </div>
+    <!--slider end-->
+
+    <!-- <div id="main_1200">
+        <ul>
+            <li><a href="category2.html"><img src="images/main_li2.png" alt="" /></a></li>
+            <li><a href="category3.html"><img src="images/main_li3.png" alt="" /></a></li>
+            <li><a href="category4.html"><img src="images/main_li4.png" alt="" /></a></li>
+            <li><a href="category1.html"><img src="images/main_li1.png" alt="" /></a></li>
+        </ul>
+        <div style="clear:both;"></div>
+    </div> -->
+    <div id="qin2">
+        <ul>
+            <li><a href="detail.html"><img src="images/custom/circle.png" />清洁服务</a></li>
+            <li><a href="detail.html"><img src="images/custom/circle.png" />大理石清洗</a></li>
+            <li><a href="detail.html"><img src="images/custom/circle.png" /></a></li>
+            <li><a href="detail.html"><img src="images/custom/circle.png" /></a></li>
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+    <!--footer start-->
+    <div id="footer_h1"></div>
+    <div id="footer_bg">
+        <div class="w1200">
+            <div class="w1000">
+                <div class="h185">
+                    <h1>石家庄金伟清洁服务有限公司</h1>
+                    <p>河北省石家庄市长安区建设北大街179号汇金大厦4楼<br />
+                        电话：15303230715<br />
+                        邮箱：532085618@qq.com<br />
+                </div>
+                <div class="h55">石家庄金伟清洁服务有限公司 Copyright © 2019 all rights
+                    reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank"></a></div>
+            </div>
+            <div class="w200"><img src="images/wx.jpg" alt="" /></div>
+        </div>
+    </div>
+    <!--footer end-->
+    <script type="text/javascript">
+        var bar = jQuery.noConflict();
+        bar(document).ready(function () {
+
+            bar(".main_visual").hover(function () {
+                bar("#btn_prev,#btn_next").fadeIn()
+            }, function () {
+                bar("#btn_prev,#btn_next").fadeOut()
+            });
+
+            bardragBln = false;
+
+            bar(".main_image").touchSlider({
+                flexible: true,
+                speed: 200,
+                btn_prev: bar("#btn_prev"),
+                btn_next: bar("#btn_next"),
+                paging: bar(".flicking_con a"),
+                counter: function (e) {
+                    bar(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+                }
+            });
+
+            bar(".main_image").bind("mousedown", function () {
+                bardragBln = false;
+            });
+
+            bar(".main_image").bind("dragstart", function () {
+                bardragBln = true;
+            });
+
+            bar(".main_image a").click(function () {
+                if (bardragBln) {
+                    return false;
+                }
+            });
+
+            timer = setInterval(function () {
+                bar("#btn_next").click();
+            }, 5000);
+
+            bar(".main_visual").hover(function () {
+                clearInterval(timer);
+            }, function () {
+                timer = setInterval(function () {
+                    bar("#btn_next").click();
+                }, 5000);
+            });
+
+            bar(".main_image").bind("touchstart", function () {
+                clearInterval(timer);
+            }).bind("touchend", function () {
+                timer = setInterval(function () {
+                    bar("#btn_next").click();
+                }, 5000);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
