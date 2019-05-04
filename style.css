@@ -532,7 +532,7 @@ div.flicking_con a.on {
 #qin2 {
 	width: 1200px;
 	height: auto;
-	min-height: 750px;
+	min-height: 360px;
 	margin: 20px auto 50px auto;
 }
 
@@ -542,8 +542,13 @@ div.flicking_con a.on {
 	padding: 0 80px;
 	float: left;
 	text-align: center;
+	overflow: auto;
 }
 
+#qin2 ul li a {
+	text-decoration: none;
+
+}
 
 
 #qin2 ul li img {
@@ -643,7 +648,7 @@ div.flicking_con a.on {
 	min-height: 570px;
 	float: right;
 	margin-top: 30px;
-	margin-right: 45px;
+	margin-right: 160px;
 }
 
 #list1 .main_bg .right890 .tit {
@@ -790,10 +795,11 @@ div.flicking_con a.on {
 	width: 870px;
 	height: auto;
 	min-height: 400px;
-	margin-left: 30px;
+	margin-bottom: 40px;
 	border-bottom: 1px solid #e2d5b9;
 	font-size: 14px;
 	padding: 15px 0;
+	overflow:auto;
 }
 
 #list1 .main_bg .right890 .neirong .bq {

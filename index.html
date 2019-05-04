@@ -5,7 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Keywords" content="石家庄金伟清洁服务有限公司" />
     <meta name="Description" content="石家庄金伟清洁服务有限公司" />
-    <title>石家庄金伟清洁服务有限公司</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>金伟清洁服务有限公司</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         /*main header css*/
@@ -27,6 +30,39 @@
             right: 65px;
             writing-mode: vertical-lr;
             color: #25262A;
+            font-size:26px;
+        }
+
+        .slider-item {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .circle-item {
+            /* background: url(/images/custom/circle.png) no-repeat center; */
+            display: inline-block;
+            width: 240px;
+            height: 240px;
+            border-radius: 100%;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .circle-img {
+            background: url(/images/custom/circle1.png) no-repeat center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            left: 0;
+        }
+
+        .circle-desc {
+            font-size: 20px;
+            color: rgb(73, 58, 37);
         }
     </style>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -36,7 +72,7 @@
 <body>
     <div id="head1">
         <img src="images/custom/yz.png" />
-        <h1>【石家庄金伟清洁服务有限公司】</h1>
+        <h1>【金伟清洁服务有限公司】</h1>
     </div>
     <!--menu start-->
     <div style=" width:100%; height:54px; background:url(images/menu_bg.gif); position:relative; z-index:55000;">
@@ -44,10 +80,10 @@
             <div id="top">
                 <div class="navwrap">
                     <ul id="nav">
-                        <li class="page_item"><a href="index.html">首页</a></li>
-                        <li class="page_item"><a href="video.html">关于我们</a></li>
-                        <li class="page_item"><a href="detail.html">案例展示</a></li>
-                        <li class="page_item"><a href="detail.html">联系我们</a></li>
+                        <li class="page_item"><a href="index.html" style="color:#fff;" >首页</a></li>
+                        <li class="page_item"><a href="about.html">关于我们</a></li>
+                        <li class="page_item"><a href="case.html">案例展示</a></li>
+                        <li class="page_item"><a href="contact.html">联系我们</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,12 +101,19 @@
             <ul>
                 <!-- <li>
                     <a href="category.html" target="_blank">
-                        <img src="http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5075339.jpg" />
+                        <img src="http://www.bjhytybj.com/uploads/allimg/171004/2-1G0041T230523.jpg" />
                     </a>
                 </li> -->
                 <li>
-                    <span style="background:url(http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5075339.jpg) center top no-repeat;background-size:cover;">
-                        <a href="category.html" target="_blank"></a>
+                    <span class="slider-item"
+                        style="background-image:url(http://www.bjhytybj.com/uploads/allimg/171004/2-1G0041T230523.jpg)">
+                        <a href="case.html" target="_blank"></a>
+                    </span>
+                </li>
+                <li>
+                    <span class="slider-item"
+                        style="background-image:url(http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5075339.jpg)">
+                        <a href="case.html" target="_blank"></a>
                     </span>
                 </li>
             </ul>
@@ -80,21 +123,35 @@
     </div>
     <!--slider end-->
 
-    <!-- <div id="main_1200">
-        <ul>
-            <li><a href="category2.html"><img src="images/main_li2.png" alt="" /></a></li>
-            <li><a href="category3.html"><img src="images/main_li3.png" alt="" /></a></li>
-            <li><a href="category4.html"><img src="images/main_li4.png" alt="" /></a></li>
-            <li><a href="category1.html"><img src="images/main_li1.png" alt="" /></a></li>
-        </ul>
-        <div style="clear:both;"></div>
-    </div> -->
     <div id="qin2">
         <ul>
-            <li><a href="detail.html"><img src="images/custom/circle.png" />清洁服务</a></li>
-            <li><a href="detail.html"><img src="images/custom/circle.png" />大理石清洗</a></li>
-            <li><a href="detail.html"><img src="images/custom/circle.png" /></a></li>
-            <li><a href="detail.html"><img src="images/custom/circle.png" /></a></li>
+            <li>
+                <a href="detail.html">
+                    <div class="circle-item">
+                        <img src="http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5077472.jpg" />
+                        <div class="circle-img"></div>
+                    </div>
+                    <b class="circle-desc">清洁服务</b>
+                </a>
+            </li>
+            <li>
+                <a href="detail.html">
+                    <div class="circle-item">
+                        <img src="http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5077472.jpg" />
+                        <div class="circle-img"></div>
+                    </div>
+                    <b class="circle-desc">大理石</b>
+                </a>
+            </li>
+            <li>
+                <a href="detail.html">
+                    <div class="circle-item">
+                        <img src="http://nwzimg.wezhan.cn/contents/sitefiles2025/10128419/images/5077472.jpg" />
+                        <div class="circle-img"></div>
+                    </div>
+                    <b class="circle-desc">清洁服务</b>
+                </a>
+            </li>
         </ul>
         <div style="clear:both;"></div>
     </div>
@@ -104,12 +161,12 @@
         <div class="w1200">
             <div class="w1000">
                 <div class="h185">
-                    <h1>石家庄金伟清洁服务有限公司</h1>
+                    <h1>金伟清洁服务有限公司</h1>
                     <p>河北省石家庄市长安区建设北大街179号汇金大厦4楼<br />
                         电话：15303230715<br />
                         邮箱：532085618@qq.com<br />
                 </div>
-                <div class="h55">石家庄金伟清洁服务有限公司 Copyright © 2019 all rights
+                <div class="h55">金伟清洁服务有限公司 Copyright © 2019 all rights
                     reserved.&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank"></a></div>
             </div>
             <div class="w200"><img src="images/wx.jpg" alt="" /></div>
